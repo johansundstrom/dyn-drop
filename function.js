@@ -14,7 +14,6 @@ var stateText = [null, 'Bara dålig', 'rätt dålig', 'rätt ok', 'rätt bra', '
 
 //startar på doc ready
 $(document).ready(function () {
-
     initComponent(1);
 
     listBrand.options[0] = new Option('Brand >>>', '0');
@@ -31,7 +30,6 @@ $(document).ready(function () {
     
     //send
     $("#sendButton").click(function () {
-
         var arr = [];
         var obj = {
             brand: listBrand.options[listBrand.selectedIndex].text,
@@ -41,7 +39,6 @@ $(document).ready(function () {
             intState: sliderState.value,
             price: textCurrency.value
         };
-
         arr.push(obj);
 
         $.ajax({
@@ -56,13 +53,12 @@ $(document).ready(function () {
         });
         closeComponent(6);
     });
-
 });
 
 
 function brandChanged() {
-
     initComponent(1);
+
     var selBrand = listBrand.options[listBrand.selectedIndex];
     if (selBrand.value == 0) {
         closeComponent(1);
@@ -80,8 +76,8 @@ function brandChanged() {
 
 
 function modelChanged() {
-
     initComponent(2);
+    
     selModel = listModel.options[listModel.selectedIndex];
     if (selModel.value == 0) {
         closeComponent(2);
@@ -99,8 +95,8 @@ function modelChanged() {
 
 
 function yearChanged() {
-
     initComponent(3);
+    
     selYear = listYear.options[listYear.selectedIndex];
     if (selYear.value == 0) {
         closeComponent(3);
@@ -115,7 +111,6 @@ function yearChanged() {
 
 
 function cathChanged() {
-
     initComponent(4);
 
     selCath = listCath.options[listCath.selectedIndex];
@@ -260,6 +255,7 @@ function closeComponent(level){
             sendButton.classList.add('btn-secondary');
     }
 }
+
 
 function removeDuplicates(myArr, key) {
     return myArr.filter((obj, pos, arr) => {
