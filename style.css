@@ -1,0 +1,61 @@
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    outline: none;
+    margin: 1.5em 0 1.5em 0;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.slider::-moz-range-thumb {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.sliderGreen::-webkit-slider-thumb {
+    background: #28a745;
+    cursor: pointer;
+}
+
+.sliderGray::-webkit-slider-thumb {
+    background: #bbb;
+    cursor: auto;
+}
+
+.sliderGray::-moz-range-thumb {
+    background: #28a745;
+    cursor: pointer;
+}
+
+.sliderGreen::-moz-range-thumb {
+    background: #ddd;
+    cursor: auto;
+}
+
+.noDrop {
+    cursor: no-drop;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+#currencyText {
+    text-align: right;
+}
