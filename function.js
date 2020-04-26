@@ -1,4 +1,3 @@
-```javascript
 // globals
 var myBrandSelect;
 
@@ -281,4 +280,3 @@ function filteredList(array, key, value) {
     }
     return result;
 }
-```
